@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework.documentation import include_docs_urls
 from rest_framework.schemas import get_schema_view
+from rest_framework.views import get_swagger_view
 
 
 API_TITLE = 'Blog API'
@@ -34,5 +35,6 @@ urlpatterns = [
         title=API_TITLE,
         description=API_DESCRIPTION
     )),
-    path('schema/', schema_view),
+    # path('schema/', schema_view),
+    path('swagger-docs/', schema_view),
 ]
